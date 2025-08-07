@@ -1,8 +1,8 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "private":  true,
-  "dependencies":  {
+  "private": true,
+  "dependencies": {
     "@chakra-ui/react": "^2.6.0",
     "@emailjs/browser": "^3.10.0",
     "@emotion/react": "^11.10.8",
@@ -50,8 +50,4 @@
   "devDependencies": {
     "tailwindcss": "^3.3.3"
   }
-
-
-
-
 }
