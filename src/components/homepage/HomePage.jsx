@@ -2,17 +2,17 @@
 
 import React from 'react';
 // Importa Header y Footer aquí
-import Header from "../../components/header/Header";
-import Footer from "../../components/footer/Footer";
+import Header from "../header/Header";
+import Footer from "../footer/Footer";
 
 // Tus componentes de sección
-import Home from "../../components/home/Home";
-import About from "../../components/about/About";
-import Skills from "../../components/skills/Skills";
-import Services from "../../components/services/Services";
-import Qualifications from "../../components/qualifications/Qualifications";
-import Work from "../../components/work/Work";
-import Contact from "../../components/contact/Contact";
+import Home from "../home/Home";
+import About from "../about/About";
+import Skills from "../skills/Skills";
+import Services from "../services/Services";
+import Qualifications from "../qualifications/Qualifications";
+import Work from "../work/Work";
+import Contact from "../contact/Contact";
 
 const HomePage = () => {
   return (
