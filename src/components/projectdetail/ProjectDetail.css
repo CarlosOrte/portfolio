@@ -27,8 +27,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
   cursor: pointer;
   border: none;
-  background-color: var(--first-color); /* Color principal */
-  color: var(--container-color);
+  background-color: var(--first-color);
+  color: var(--container-color); /* Color de texto que contrasta con el fondo del botón */
 }
 
 .project-detail__back-button:hover {
@@ -38,6 +38,11 @@
 
 .project-detail__icon {
   font-size: 1.25rem;
+}
+
+/* Ocultar el botón 'Volver al Portafolio' si el nav lo reemplaza */
+.project-detail-section .back-button {
+  display: none;
 }
 
 /* --- Ajustes para el resto del contenido para que no quede debajo del nav fijo --- */
@@ -108,11 +113,6 @@
   gap: 1rem;
   margin-top: 2rem;
   justify-content: center;
-}
-
-/* Ocultar el botón 'Volver al Portafolio' si el nav lo reemplaza */
-.project-detail-section .back-button {
-  display: none;
 }
 
 /* Mensajes de estado */
