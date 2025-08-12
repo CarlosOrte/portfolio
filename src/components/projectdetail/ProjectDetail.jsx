@@ -13,7 +13,7 @@ const ProjectDetail = () => {
 
     // Define la URL base del backend de forma condicional
     const backendBaseUrl = process.env.NODE_ENV === 'production'
-        ? 'https://tu-backend-django.onrender.com' // <-- ¡IMPORTANTE! Reemplaza con la URL de tu servicio de Render
+        ? 'https://portfolio-ro29.onrender.com' // <-- ¡IMPORTANTE! Reemplaza con la URL de tu servicio de Render
         : 'http://localhost:8000';
 
     useEffect(() => {
