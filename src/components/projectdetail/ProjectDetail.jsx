@@ -34,7 +34,7 @@ const ProjectDetail = () => {
     }, [id, backendBaseUrl]);
 
     const returnToPortfolioLink = (
-        <Link to="/" className="button button--flex project-detail__back-button">
+        <Link to="/" className="project-detail__back-button project-detail__back-button--secondary">
             <i className='bx bx-arrow-back project-detail__icon'></i> Volver al Portafolio
         </Link>
     );
