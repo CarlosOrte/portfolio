@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
 import { useParams, Link } from 'react-router-dom';
+import axios from 'axios';
 
 import './ProjectDetail.css';
 
@@ -10,9 +10,8 @@ const ProjectDetail = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 
-    // Define la URL base del backend de forma condicional
     const backendBaseUrl = process.env.NODE_ENV === 'production'
-        ? 'https://tu-backend-django.onrender.com' // <-- REVISA QUE ESTA SEA LA URL CORRECTA
+        ? 'https://portfolio-ro29.onrender.com'
         : 'http://localhost:8000';
 
     useEffect(() => {
@@ -34,14 +33,17 @@ const ProjectDetail = () => {
         fetchProjectDetails();
     }, [id, backendBaseUrl]);
 
-    // Lógica para renderizar los diferentes estados
+    const returnToPortfolioLink = (
+        <Link to="/" className="button button--flex project-detail__back-button">
+            <i className='bx bx-arrow-back project-detail__icon'></i> Volver al Portafolio
+        </Link>
+    );
+
     if (loading) {
         return (
             <section className="project-detail-section">
                 <nav className="project-detail-nav">
-                    <Link to="/" className="project-detail-nav__link">
-                        <i className='bx bx-home project-detail-nav__icon'></i> Inicio
-                    </Link>
+                    {returnToPortfolioLink}
                 </nav>
                 <p className="loading-message">Cargando detalles del proyecto...</p>
             </section>
@@ -52,12 +54,9 @@ const ProjectDetail = () => {
         return (
             <section className="project-detail-section">
                 <nav className="project-detail-nav">
-                    <Link to="/" className="project-detail-nav__link">
-                        <i className='bx bx-home project-detail-nav__icon'></i> Inicio
-                    </Link>
+                    {returnToPortfolioLink}
                 </nav>
                 <p className="error-message">{error}</p>
-                <Link to="/" className="button button--flex back-button">Volver al Portafolio</Link>
             </section>
         );
     }
@@ -66,26 +65,17 @@ const ProjectDetail = () => {
         return (
             <section className="project-detail-section">
                 <nav className="project-detail-nav">
-                    <Link to="/" className="project-detail-nav__link">
-                        <i className='bx bx-home project-detail-nav__icon'></i> Inicio
-                    </Link>
+                    {returnToPortfolioLink}
                 </nav>
                 <p className="no-project-found">Proyecto no encontrado.</p>
-                <Link to="/" className="button button--flex back-button">Volver al Portafolio</Link>
             </section>
         );
     }
 
-    // Renderizar detalles del proyecto si todo está bien
     return (
         <section className="project-detail-section">
             <nav className="project-detail-nav">
-                <Link to="/" className="project-detail-nav__link">
-                    <i className='bx bx-home project-detail-nav__icon'></i> Inicio
-                </Link>
-                <Link to="/" className="project-detail-nav__link">
-                    <i className='bx bx-arrow-back project-detail-nav__icon'></i> Volver
-                </Link>
+                {returnToPortfolioLink}
             </nav>
 
             <h1 className="project-detail__title">{project.title}</h1>

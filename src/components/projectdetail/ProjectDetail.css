@@ -2,171 +2,147 @@
 
 /* --- Estilos para el Navbar de la vista de detalle --- */
 .project-detail-nav {
-    display: flex;
-    justify-content: space-between; /* Espacia los elementos */
-    align-items: center;
-    padding: 1rem 1.5rem;
-    background-color: var(--container-color); /* Usa el color de tu contenedor o un color neutro */
-    box-shadow: 0 2px 8px hsla(var(--hue), var(--sat), 15%, 0.1);
-    position: sticky; /* Fija el nav en la parte superior al hacer scroll */
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100; /* Asegura que esté por encima de otros elementos */
-  }
-  
-  /* Estilos de botones para los enlaces del nav, más parecidos a tus botones principales */
-  .project-detail-nav__link,
-  .project-detail-nav__button {
-    display: inline-flex; /* Permite que el texto y el icono estén en línea y centrados */
-    align-items: center;
-    gap: 0.5rem; /* Espacio entre icono y texto */
-    padding: 0.75rem 1.5rem; /* Padding de tus botones principales */
-    border-radius: 0.75rem; /* Radio de borde de tus botones principales */
-    font-weight: var(--font-medium);
-    text-decoration: none;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para hover */
-    cursor: pointer;
-    border: none; /* Asegurarse de que no tengan bordes por defecto */
-    /* El background será definido individualmente para link y button */
-  }
-  
-  /* Estilo para el enlace "Inicio" (botón principal) */
-  .project-detail-nav__link {
-    background-color: var(--first-color); /* El color principal de tu tema */
-    color: var(--container-color); /* Color de texto que contrasta con el primary */
-  }
-  
-  /* Estilo para el botón "Cerrar Pestaña" (botón secundario/transparente) */
-  .project-detail-nav__button {
-    background-color: transparent; /* Fondo transparente */
-    color: var(--title-color); /* Color del texto/icono principal de tu tema */
-    border: 1px solid var(--title-color); /* Borde para el botón secundario */
-  }
-  
-  /* Efectos hover para los enlaces del nav */
-  .project-detail-nav__link:hover {
-    background-color: var(--first-color-alt); /* Un tono más oscuro o alternativo de tu color principal */
-    color: var(--container-color); /* Asegura que el color de texto se mantenga */
-  }
-  
-  .project-detail-nav__button:hover {
-    background-color: var(--title-color); /* Fondo con el color de tu título */
-    color: var(--container-color); /* Color de texto que contrasta al pasar el ratón */
-  }
-  
-  .project-detail-nav__icon {
-    font-size: 1.25rem; /* Tamaño de los iconos */
-  }
-  
-  /* --- Ajustes para el resto del contenido para que no quede debajo del nav fijo --- */
+  display: flex;
+  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background-color: var(--container-color);
+  box-shadow: 0 2px 8px hsla(var(--hue), var(--sat), 15%, 0.1);
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+/* Estilo para el botón "Volver al Portafolio" */
+.project-detail__back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: var(--font-medium);
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background-color: var(--first-color); /* Color principal */
+  color: var(--container-color);
+}
+
+.project-detail__back-button:hover {
+  background-color: var(--first-color-alt); /* Tono alternativo para hover */
+  color: var(--container-color);
+}
+
+.project-detail__icon {
+  font-size: 1.25rem;
+}
+
+/* --- Ajustes para el resto del contenido para que no quede debajo del nav fijo --- */
+.project-detail-section {
+  padding: 2rem 1.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: var(--body-color);
+  color: var(--text-color);
+  min-height: calc(100vh - 4rem);
+  padding-top: calc(1rem + 1.5rem);
+}
+
+/* --- Estilos para los elementos internos de la sección de detalle --- */
+.project-detail__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.project-detail__category {
+  display: block;
+  font-size: var(--normal-font-size);
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.project-detail__image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  margin: 0 auto 2rem;
+  display: block;
+  box-shadow: 0 4px 12px hsla(var(--hue), var(--sat), 15%, 0.1);
+}
+
+.project-detail__content {
+  background-color: var(--container-color);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px hsla(var(--hue), var(--sat), 15%, 0.05);
+}
+
+.project-detail__subtitle {
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.1));
+  padding-bottom: 0.5rem;
+}
+
+.project-detail__content p {
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.project-detail__technologies {
+  font-weight: var(--font-medium);
+  color: var(--first-color);
+}
+
+.project-detail__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+/* Ocultar el botón 'Volver al Portafolio' si el nav lo reemplaza */
+.project-detail-section .back-button {
+  display: none;
+}
+
+/* Mensajes de estado */
+.loading-message, .error-message, .no-project-found {
+  text-align: center;
+  padding: 2rem;
+  font-size: var(--h3-font-size);
+  color: var(--text-color);
+}
+
+.error-message {
+  color: var(--text-color-light);
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 768px) {
   .project-detail-section {
-    /* Ajusta el padding superior para que el contenido no quede oculto por el nav fijo.
-       La altura del nav es aprox. 4rem (padding 1rem arriba y abajo + altura de línea).
-       Puedes ajustar '2rem' aquí para empujar el contenido más abajo si es necesario. */
-    padding: 2rem 1.5rem 2rem;
-    max-width: 900px;
-    margin: 0 auto;
-    background-color: var(--body-color);
-    color: var(--text-color);
-    min-height: calc(100vh - 4rem); /* Asegura que la sección ocupa al menos la altura restante de la vista */
-    padding-top: calc(1rem + 1.5rem); /* Esto es una forma de añadir el padding superior real, sumando el padding del nav y quizás un margen extra */
-  }
-  
-  
-  /* --- Estilos para los elementos internos de la sección de detalle --- */
-  .project-detail__title {
-    font-size: var(--h1-font-size);
-    color: var(--title-color);
-    margin-bottom: 0.5rem;
-    text-align: center;
-  }
-  
-  .project-detail__category {
-    display: block;
-    font-size: var(--normal-font-size);
-    color: var(--text-color);
-    margin-bottom: 1.5rem;
-    text-align: center;
-  }
-  
-  .project-detail__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 1rem;
-    margin: 0 auto 2rem;
-    display: block;
-    box-shadow: 0 4px 12px hsla(var(--hue), var(--sat), 15%, 0.1);
-  }
-  
-  .project-detail__content {
-    background-color: var(--container-color);
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: 0 4px 8px hsla(var(--hue), var(--sat), 15%, 0.05);
-  }
-  
-  .project-detail__subtitle {
-    font-size: var(--h3-font-size);
-    color: var(--title-color);
-    margin-top: 1.5rem;
-    margin-bottom: 0.75rem;
-    border-bottom: 1px solid var(--border-color, rgba(0,0,0,0.1));
-    padding-bottom: 0.5rem;
-  }
-  
-  .project-detail__content p {
-    line-height: 1.7;
-    margin-bottom: 1rem;
-  }
-  
-  .project-detail__technologies {
-    font-weight: var(--font-medium);
-    color: var(--first-color);
-  }
-  
-  .project-detail__links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 2rem;
-    justify-content: center;
-  }
-  
-  /* Ocultar el botón 'Volver al Portafolio' si el nav lo reemplaza */
-  .project-detail-section .back-button {
-    display: none;
-  }
-  
-  /* Mensajes de estado */
-  .loading-message, .error-message, .no-project-found {
-    text-align: center;
-    padding: 2rem;
-    font-size: var(--h3-font-size);
-    color: var(--text-color);
-  }
-  
-  .error-message {
-    color: var(--text-color-light);
-  }
-  
-  /* Media queries para responsividad */
-  @media screen and (max-width: 768px) {
-    .project-detail-section {
       padding: 4rem 1rem 1.5rem;
-    }
-    .project-detail__title {
+  }
+  .project-detail__title {
       font-size: var(--h2-font-size);
-    }
-    .project-detail__content {
+  }
+  .project-detail__content {
       padding: 1rem;
-    }
-    .project-detail-nav {
+  }
+  .project-detail-nav {
       padding: 0.75rem 1rem;
-    }
-    .project-detail-nav__link,
-    .project-detail-nav__button {
+  }
+  .project-detail__back-button {
       padding: 0.5rem 0.75rem;
       font-size: var(--small-font-size);
-    }
   }
+}
