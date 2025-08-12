@@ -11,7 +11,7 @@ const ProjectDetail = () => {
     const [error, setError] = useState(null);
 
     const backendBaseUrl = process.env.NODE_ENV === 'production'
-        ? 'https://portfolio-ro29.onrender.com'
+        ? 'https://tu-backend-django.onrender.com'
         : 'http://localhost:8000';
 
     useEffect(() => {
