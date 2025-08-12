@@ -3,7 +3,7 @@
 /* --- Estilos para el Navbar de la vista de detalle --- */
 .project-detail-nav {
   display: flex;
-  justify-content: flex-start; /* Alinea los elementos a la izquierda */
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem 1.5rem;
   background-color: var(--container-color);
@@ -15,7 +15,7 @@
   z-index: 100;
 }
 
-/* Estilo para el botón "Volver al Portafolio" */
+/* Estilo para el botón "Volver al Portafolio" (estilo primario) */
 .project-detail__back-button {
   display: inline-flex;
   align-items: center;
@@ -28,12 +28,23 @@
   cursor: pointer;
   border: none;
   background-color: var(--first-color);
-  color: var(--container-color); /* Color de texto que contrasta con el fondo del botón */
+  color: var(--container-color);
 }
 
 .project-detail__back-button:hover {
-  background-color: var(--first-color-alt); /* Tono alternativo para hover */
-  color: var(--container-color);
+  background-color: var(--first-color-alt);
+}
+
+/* --- Nuevo estilo secundario para el botón "Volver al Portafolio" (como el de "Cerrar Pestaña") --- */
+.project-detail__back-button--secondary {
+  background-color: transparent; /* Fondo transparente */
+  color: var(--title-color); /* Color del texto/icono */
+  border: 1px solid var(--title-color); /* Borde para el botón secundario */
+}
+
+.project-detail__back-button--secondary:hover {
+  background-color: var(--title-color); /* Fondo al pasar el ratón */
+  color: var(--container-color); /* Color de texto al pasar el ratón */
 }
 
 .project-detail__icon {
