@@ -35,14 +35,6 @@ const ProjectDetail = () => {
         fetchProjectDetails();
     }, [id, backendBaseUrl]);
 
-    const handleCloseTab = () => {
-        window.close();
-        setTimeout(() => {
-            if (!document.hidden) {
-                navigate('/');
-            }
-        }, 100);
-    };
 
     if (loading) {
         return (
@@ -51,9 +43,9 @@ const ProjectDetail = () => {
                     <Link to="/" className="project-detail-nav__link">
                         <i className='bx bx-home project-detail-nav__icon'></i> Inicio
                     </Link>
-                    <button onClick={handleCloseTab} className="project-detail-nav__button">
-                        <i className='bx bx-x project-detail-nav__icon'></i> Cerrar Pestaña
-                    </button>
+                    <Link to="/" className="project-detail-nav__button">
+                      <i className='bx bx-home project-detail-nav__icon'></i> Volver al Portafolio
+                    </Link>
                 </nav>
                 <p className="loading-message">Cargando detalles del proyecto...</p>
             </section>
