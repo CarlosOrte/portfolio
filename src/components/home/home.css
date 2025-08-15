@@ -203,7 +203,7 @@
 }
 /* Estilo para el efecto holográfico en la estrella */
 .holographic-path {
-     /* fill: #005F6B; Un color de relleno base por si la máscara no carga */
+    fill: url(#holographic-gradient); /* Un color de relleno base por si la máscara no carga */
     mask-image: linear-gradient(
         45deg,
         transparent 25%,
