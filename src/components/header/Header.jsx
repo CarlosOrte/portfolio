@@ -34,8 +34,8 @@ const Header = () => {
       <nav className="nav container">
         <a href="index.html" className="nav__logo">
         <svg
-                    width="33" 
-                    height="33" 
+                    width="12" 
+                    height="12" 
                     viewBox="0 0 24 24"
                     fill="none" // <-- CAMBIO: Elimina el color de relleno del SVG
                     xmlns="http://www.w3.org/2000/svg"
