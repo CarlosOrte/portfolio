@@ -17,14 +17,15 @@ const Data = () => {
             <h1 className="home__title">
                 Hi!, Im
                 <svg
-                    width="66"
-                    height="66"
+                    width="66" 
+                    height="66" 
                     viewBox="0 0 24 24"
-                    fill="#005F6B"
+                    fill="none" // <-- CAMBIO: Elimina el color de relleno del SVG
                     xmlns="http://www.w3.org/2000/svg"
-                    className="home__hand"
+                    className="home__hand" 
                 >
-                    <path d="M12 0L14.71 9.29L24 12L14.71 14.71L12 24L9.29 14.71L0 12L9.29 9.29L12 0Z" />
+                  {/* CAMBIO: Agrega una nueva clase para la animación */}
+                  <path d="M12 0L14.71 9.29L24 12L14.71 14.71L12 24L9.29 14.71L0 12L9.29 9.29L12 0Z" className="holographic-path" /> 
                 </svg>
                 <br />Carlos Ortega
             </h1>
