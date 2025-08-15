@@ -10,7 +10,7 @@ const WorkItems = ({ item }) => {
         <div className="work__img-placeholder">No Image</div>
       )}
       <h3 className="work__title">{item.title}</h3>
-      <span className="work__category">{item.category}</span>
+      
 
       {/* Nuevo botón "Ver Detalles" que usa Link */}
       <Link to={`/projects/${item.id}`} className="work__button">
