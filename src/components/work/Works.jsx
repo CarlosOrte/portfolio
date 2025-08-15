@@ -28,7 +28,8 @@ const Works = () => {
                 const mappedProjects = response.data.map(proj => ({
                     id: proj.id,
                     // Construye la URL completa de la imagen para que React la pueda mostrar
-                    image: `${backendBaseUrl}${proj.main_image_url}`,
+                    // image: `${backendBaseUrl}${proj.main_image_url}`,
+                    image: proj.main_image_url,
                     title: proj.title,
                     category: proj.category,
                     deploymentLink: proj.deployment_link,

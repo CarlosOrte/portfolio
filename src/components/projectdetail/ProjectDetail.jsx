@@ -83,7 +83,8 @@ const ProjectDetail = () => {
 
             {project.main_image_url && (
                 <img
-                    src={`${backendBaseUrl}${project.main_image_url}`}
+                     // src={`${backendBaseUrl}${project.main_image_url}`}
+                    src={project.main_image_url}
                     alt={project.title}
                     className="project-detail__image"
                 />
