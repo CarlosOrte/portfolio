@@ -201,3 +201,34 @@
         transform: translateY(0);
     }
 }
+/* Estilo para el efecto holográfico en la estrella */
+.holographic-path {
+    fill: none; /* Asegura que el path no tenga un color de relleno fijo */
+    stroke-width: 0.5px;
+    stroke: url(#my-gradient); /* Usaremos este para el contorno */
+    mask-image: linear-gradient(
+        45deg,
+        #f06,
+        #f06,
+        transparent 50%,
+        #f06,
+        #f06
+    );
+    mask-size: 200% 200%;
+    animation: holographic-pulse 5s infinite ease-in-out;
+}
+
+@keyframes holographic-pulse {
+    0% {
+        mask-position: 0% 0%;
+        transform: rotate(0deg);
+    }
+    50% {
+        mask-position: 100% 100%;
+        transform: rotate(180deg);
+    }
+    100% {
+        mask-position: 0% 0%;
+        transform: rotate(360deg);
+    }
+}
