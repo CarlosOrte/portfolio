@@ -203,9 +203,7 @@
 }
 /* Estilo para el efecto holográfico en la estrella */
 .holographic-path {
-    fill: none; /* Asegura que el path no tenga un color de relleno fijo */
-    stroke-width: 0.5px;
-    stroke: url(#my-gradient); /* Usaremos este para el contorno */
+    fill: url(#holographic-gradient); /* Cambia fill a la URL de un degradado */
     mask-image: linear-gradient(
         45deg,
         #f06,
