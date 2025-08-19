@@ -21,8 +21,9 @@
 // Mantén solo projectsNav si todavía la necesitas
 export const projectsNav = [
   { name: "all" },
-  { name: "code" },
-  { name: "design" },
-  { name: "django" },
+  { name: "Fullstack" },
+  { name: "UX/UI" },
+  { name: "Unity" },
+  { name: "Others" },
   // Asegúrate de que estas categorías coincidan con las que uses en Django
 ];
