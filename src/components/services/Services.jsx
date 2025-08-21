@@ -45,26 +45,26 @@ const Services = () => {
 
               <h3 className="services__modal-title">UX/UI Design</h3>
               <p className="services__modal-description">
-                [cite_start]I am a recent graduate with certifications in user experience, looking for opportunities to apply my skills on real projects[cite: 13, 24]. [cite_start]I create functional and human-centered solutions[cite: 15].
+                I am a recent graduate with a passion for creating functional and human-centered solutions. I'm actively seeking opportunities to apply my certified UX/UI skills to real-world projects. I believe in using AI to enhance creative and developmental processes.
               </p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Creation of UX/UI, wireframes and web redesign[cite: 17].
+                    Creation of UX/UI, wireframes and web redesign.
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Design solutions for innovative projects[cite: 15].
+                    Design solutions for innovative projects.
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Implementation of artificial intelligence to optimize design and creative processes[cite: 14].
+                    Implementation of artificial intelligence to optimize design and creative processes.
                   </p>
                 </li>
               </ul>
@@ -72,12 +72,12 @@ const Services = () => {
           </div>
         </div>
 
-        {/* Frontend Development Service */}
+        {/* Full Stack Development Service */}
         <div className="services__content">
           <div>
-            <i className="uil uil-browser services__icon"></i>
+            <i className="uil uil-brackets-curly services__icon"></i>
             <h3 className="services__title">
-              Frontend <br /> Development
+              Full Stack <br /> Development
             </h3>
           </div>
           <span
@@ -103,87 +103,28 @@ const Services = () => {
                 className="uil uil-times services__modal-close"
               ></i>
 
-              <h3 className="services__modal-title">Frontend Development</h3>
+              <h3 className="services__modal-title">Full Stack Development</h3>
               <p className="services__modal-description">
-                [cite_start]As a recent graduate, I am specialized in responsive and interactive web interfaces[cite: 13, 27]. [cite_start]I have experience in creating websites with WordPress and developing dynamic web applications with React[cite: 17, 29].
+                I specialize in both frontend and backend development with experience in modern technologies and frameworks. I can build, maintain, and optimize full-featured web applications from the ground up.
               </p>
 
               <ul className="services__modal-services grid">
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Responsive websites with HTML, CSS, and JavaScript[cite: 29].
+                    Developing dynamic web applications with React.
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Developing with React[cite: 29].
+                    Server-side development with Django.
                   </p>
                 </li>
                 <li className="services__modal-service">
                   <i className="uil uil-check-circle services__modal-icon"></i>
                   <p className="services__modal-info">
-                    [cite_start]Content creation for social media and web pages[cite: 17].
-                  </p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        {/* Backend Development Service */}
-        <div className="services__content">
-          <div>
-            <i className="uil uil-database services__icon"></i>
-            <h3 className="services__title">
-              Backend <br /> Development
-            </h3>
-          </div>
-          <span
-            onClick={() => {
-              toggleTab(3);
-            }}
-            className="services__button"
-          >
-            View More
-            <i className="uil uil-arrow-right services__button-icon"></i>
-          </span>
-
-          <div
-            className={
-              toggleState === 3
-                ? "services__modal active-modal"
-                : "services__modal"
-            }
-          >
-            <div className="services__modal-content">
-              <i
-                onClick={() => toggleTab(0)}
-                className="uil uil-times services__modal-close"
-              ></i>
-
-              <h3 className="services__modal-title">Backend Development</h3>
-              <p className="services__modal-description">
-                [cite_start]I have a professional certificate in backend development with experience in Django[cite: 29, 31, 32]. I create scalable and functional solutions for web applications.
-              </p>
-
-              <ul className="services__modal-services grid">
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    [cite_start]Server-side development with Django[cite: 29].
-                  </p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    API integration and database management.
-                  </p>
-                </li>
-                <li className="services__modal-service">
-                  <i className="uil uil-check-circle services__modal-icon"></i>
-                  <p className="services__modal-info">
-                    [cite_start]AI and Prompting to optimize development processes[cite: 14, 39].
+                    Integration of APIs and database management.
                   </p>
                 </li>
               </ul>
