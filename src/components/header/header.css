@@ -112,27 +112,24 @@
     }
 }
 
-/* Nuevo estilo para la estrella estática en el nav */
-.nav__star-static {
-    fill: #005F6B; /* Color de relleno de respaldo */
+.holographic-path {
+    fill: url(#holographic-gradient); /* Un color de relleno base por si la máscara no carga */
     mask-image: linear-gradient(
         45deg,
-        #ff0000, /* Rojo */
-        #0000ff, /* Azul */
-        #008000, /* Verde */
-        #800080  /* Púrpura */
+        transparent 25%,
+        white 50%,
+        transparent 75%
     );
-    mask-size: 100% 100%;
-    -webkit-mask-image: linear-gradient(
-        45deg,
-        #ff0000,
-        #0000ff,
-        #008000,
-        #800080
-    );
+    mask-size: 400% 100%; /* Ancho mayor para el movimiento */
+    mask-repeat: no-repeat;
+    animation: holographic-slide 5s infinite linear; /* Animación lineal para un movimiento constante */
 }
 
-.nav__logo .nav__star-static {
-    width: 12px;
-    height: 12px;
+@keyframes holographic-slide {
+    0% {
+        mask-position: 100% 0; /* Inicia fuera de la vista */
+    }
+    100% {
+        mask-position: 0 0; /* Termina dentro de la vista */
+    }
 }
