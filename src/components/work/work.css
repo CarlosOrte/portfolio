@@ -121,10 +121,10 @@
     /* Define el degradado que se moverá a través del texto */
     background: linear-gradient(
         45deg,
-        #005F6B,
-        #00B6CC,
-        #005F6B,
-        #00B6CC
+        #ff0000, /* Rojo */
+        #0000ff, /* Azul */
+        #008000, /* Verde */
+        #800080  /* Púrpura */
     );
     /* Define el tamaño del degradado, más grande que el texto */
     background-size: 200% 100%;
