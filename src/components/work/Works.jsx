@@ -75,9 +75,11 @@ const Works = () => {
     if (loading) {
         return (
             <section className="work section" id="portfolio">
-                <h2 className="section__title">Portafolio</h2>
-                <span className="section__subtitle">Mis trabajos más recientes</span>
-                <div className="work__filters">Cargando proyectos...</div>
+                <h2 className="section__title">Portfolio</h2>
+                <span className="section__subtitle">Most Recent Projects</span>
+                <div className="work__filters">
+                    <span className="loading-holographic-text">Loading projects...</span>
+                </div>
                 <p className="loading-message">Asegúrate de que tu servidor Django esté funcionando.</p>
             </section>
         );
@@ -86,9 +88,9 @@ const Works = () => {
     if (error) {
         return (
             <section className="work section" id="portfolio">
-                <h2 className="section__title">Portafolio</h2>
-                <span className="section__subtitle">Mis trabajos más recientes</span>
-                <div className="work__filters">Error al cargar</div>
+                <h2 className="section__title">Portfolio</h2>
+                <span className="section__subtitle">Most Recent Projects</span>
+                <div className="work__filters">Error loading</div>
                 <p className="error-message">{error}</p>
             </section>
         );

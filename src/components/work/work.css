@@ -117,3 +117,31 @@
     transition: 0.3s;
     background-color: rgb(219, 219, 219);
   }
+  .loading-holographic-text {
+    /* Define el degradado que se moverá a través del texto */
+    background: linear-gradient(
+        45deg,
+        #005F6B,
+        #00B6CC,
+        #005F6B,
+        #00B6CC
+    );
+    /* Define el tamaño del degradado, más grande que el texto */
+    background-size: 200% 100%;
+    /* Aplica una máscara para que el degradado solo se vea en las letras */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* Aplica la animación */
+    animation: holographic-text-animation 2s linear infinite;
+}
+
+/* Define la animación */
+@keyframes holographic-text-animation {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
