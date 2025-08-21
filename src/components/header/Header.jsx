@@ -32,28 +32,19 @@ const Header = () => {
   return (
     <header className="header">
       <nav className="nav container">
-        <a href="index.html" className="nav__logo">
-        <svg
-                    width="12" 
-                    height="12" 
-                    viewBox="0 0 24 24"
-                    fill="none" // <-- CAMBIO: Elimina el color de relleno del SVG
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="home__hand" 
-                >
-                  <defs>
-                    <linearGradient id="holographic-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{stopColor:'red', stopOpacity:'1'}} />
-                      <stop offset="25%" style={{stopColor:'blue', stopOpacity:'1'}} />
-                      <stop offset="50%" style={{stopColor:'green', stopOpacity:'1'}} />
-                      <stop offset="75%" style={{stopColor:'purple', stopOpacity:'1'}} />
-                      <stop offset="100%" style={{stopColor:'red', stopOpacity:'1'}} />
-                    </linearGradient>
-                  </defs>
-                  {/* CAMBIO: Agrega una nueva clase para la animación */}
-                  <path d="M12 0L14.71 9.29L24 12L14.71 14.71L12 24L9.29 14.71L0 12L9.29 9.29L12 0Z" className="holographic-path" /> 
-                </svg>CarlosOrtega.UX
-        </a>
+      <a href="index.html" className="nav__logo">
+          <svg
+              width="12" 
+              height="12" 
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+          >
+              {/* Cambia la clase para la estrella estática */}
+              <path d="M12 0L14.71 9.29L24 12L14.71 14.71L12 24L9.29 14.71L0 12L9.29 9.29L12 0Z" className="nav__star-static" /> 
+          </svg>
+          CarlosOrtega.UX
+      </a>
         <div className={Toggle ? "nav__menu show-menu" : "nav__menu"}>
           <ul className="nav__list grid">
             <li className="nav__item">
