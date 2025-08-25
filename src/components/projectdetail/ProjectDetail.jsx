@@ -45,7 +45,7 @@ const ProjectDetail = () => {
                 <nav className="project-detail-nav">
                     {returnToPortfolioLink}
                 </nav>
-                <p className="loading-message">Cargando detalles del proyecto...</p>
+                <p className="loading-message loading-holographic-tex">Cargando detalles del proyecto...</p>
             </section>
         );
     }

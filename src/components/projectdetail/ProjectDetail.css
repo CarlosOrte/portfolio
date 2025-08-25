@@ -157,3 +157,32 @@
       font-size: var(--small-font-size);
   }
 }
+.loading-holographic-text {
+  /* Define el degradado que se moverá a través del texto */
+  background: linear-gradient(
+      45deg,
+      #ff0000, /* Rojo */
+      #0000ff, /* Azul */
+      #008000, /* Verde */
+      #800080  /* Púrpura */
+  );
+  /* Define el tamaño del degradado, más grande que el texto */
+  background-size: 200% 100%;
+  /* Aplica una máscara para que el degradado solo se vea en las letras */
+  -webkit-background-clip: text;
+  background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  
+  /* Aplica la animación */
+  animation: holographic-text-animation 2s linear infinite;
+}
+
+/* Define la animación */
+@keyframes holographic-text-animation {
+  0% {
+      background-position: 100% 0;
+  }
+  100% {
+      background-position: 0 0;
+  }
+}
